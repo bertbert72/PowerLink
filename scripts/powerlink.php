@@ -6,7 +6,7 @@ function postResult($cmd,$ndata) {
             'header'  => "Content-type: application/x-www-form-urlencoded\r\n" .
                          "Accept-language: en-GB,en-US;q=0.8,en;q=0.6\r\n" .
                          "Cookie: {$cookie_name}={$_SESSION[$cookie_name]}",
-            'method'  => $method,
+            'method'  => 'POST',
             'content' => ($ndata != '') ? http_build_query($ndata) : NULL
         )
     );
